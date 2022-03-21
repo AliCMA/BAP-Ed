@@ -20,7 +20,7 @@ bool led3Status = false; //toggle led on/off
 
 
 // your data
-String studentName = "Mert student nummer 32840"; // jouw student nummer + naam
+String studentName = "Ali student nummer 32778"; // jouw student nummer + naam
 
 
 
@@ -71,6 +71,7 @@ void setup(){
 pinMode(Led1, OUTPUT); // Initialize the pin as an output
 pinMode(Led2, OUTPUT); // Initialize the pin as an output
 pinMode(Led3, OUTPUT); // Initialize the pin as an output
+
 Serial.begin(115200); // Start de serial monitor
 
 
@@ -83,9 +84,7 @@ Serial.begin(115200); // Start de serial monitor
 * server.onNotFound
 */
 server.on("/", handleRoot);
-
-
-
+ 
 server.on("/easter_egg", [](){
 server.send(200, "text/plain", "je gaat dood");
 });
